@@ -5,3 +5,4 @@
 - store sheet data in private sheet by a service worker
 - cache sheet data (local storage - other)
 - build it as a PWA
+- add README & description in repo

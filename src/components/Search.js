@@ -24,14 +24,14 @@ const Search = () => {
 					class="input--lg"
 					autocomplete="text"
 					inputmode="text"
-					minlength="1"
 					maxlength="50"
 					value=${state.query}
 					onChange=${e => handleChange(e)}
 					placeholder="Search Products"
-					required
 				/>
-				<input type="submit" value="Search" class="btn btn--lg transition" onClick=${handleSubmit} />
+				<input type="submit" value="${
+          state.query ? "Search" : "Browse All"
+        }" class="btn btn--lg transition" onClick=${handleSubmit} />
 			</div>
 		</form>
 	`;

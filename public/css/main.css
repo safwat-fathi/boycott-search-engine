@@ -48,7 +48,7 @@ html[lang="en"] body {
 }
 
 section {
-  margin-block: 3em;
+  /* margin-block: 3em; */
 }
 
 h1 {
@@ -150,8 +150,14 @@ img {
   display: flex !important;
 }
 
+.flex-row {
+  flex-direction: row;
+}
+.flex-col {
+  flex-direction: column;
+}
+
 * {
-  flex-direction: var(--direction);
   flex-wrap: var(--wrap);
   align-items: var(--align);
   justify-content: var(--justify);
@@ -194,7 +200,7 @@ img {
 }
 
 .btn {
-  width: fit-content;
+  width: max(100px, 10em);
   padding: 0.5rem 0.8rem;
   background-color: var(--red);
   color: white;
@@ -279,10 +285,10 @@ div.title .line {
   display: block;
 }
 
-/* header */
+/* main */
 /* ---------- */
 
-section.search {
+main {
   height: 100vh;
   display: flex;
   flex-direction: column;
@@ -290,15 +296,28 @@ section.search {
   justify-content: center;
 }
 
-.header {
+/* header */
+/* ---------- */
+
+section.header {
   display: flex;
   flex-flow: column;
-  gap: 1em;
   align-items: center;
   justify-content: center;
 }
-
-.header h1 {
+section.header h1 {
   font-size: 4em;
   text-align: center;
+}
+
+/* results */
+/* ---------- */
+
+.results h4 {
+  text-align: center;
+}
+
+.results ul {
+  width: 45em;
+  align-items: flex-start;
 }

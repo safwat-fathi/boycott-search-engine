@@ -1,13 +1,13 @@
 import h from "./helpers/htm-create-element.js";
-import Search from "./components/Search.js";
 import { AppProvider } from "./AppContext/index.js";
-
-// const styles = { "--justify": "center", "--align": "center", height: "100vh" };
+import Search from "./components/Search.js";
+import Results from "./components/Results.js";
 
 function App() {
   return h`
     <${AppProvider}>
 			<${Search} />
+			<${Results} />
 		</${AppProvider}>
 	`;
 }

@@ -7,11 +7,11 @@ import ActionTypes from "./actions.js";
 import { AppReducer } from "./reducer.js";
 import { convertFromArrayBuffer } from "../helpers/files.js";
 
-const SPREADSHEET_ID = "1-GMsB3th10L-VT4PCnw5GCLEnaCFIQ04U7b-rvvE_zI";
+const SPREADSHEET_ID = "1otnux4WInu6ZzgDamBEWKO0LeFw1Dg2Bv0xJxCPZwd4";
 
-const API_KEY = "AIzaSyBNE-9PXNSj-hAYcj2k9hd4NQJuuq3lSUA";
+const API_KEY = "AIzaSyB56UJNZmkX2qALZTCuRnybSFSXCkIC6IU";
 
-const initialState = { query: "", sheetData: [], results: [] };
+const initialState = { query: "", sheetData: [], results: [], loading: false };
 
 const AppContext = createContext({
   state: initialState,
