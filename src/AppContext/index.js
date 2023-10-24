@@ -6,10 +6,9 @@ import h from "../helpers/htm-create-element.js";
 import ActionTypes from "./actions.js";
 import { AppReducer } from "./reducer.js";
 import { convertFromArrayBuffer } from "../helpers/files.js";
+import secrets from "../../secrets.json" assert { type: "json" };
 
 const SPREADSHEET_ID = "1otnux4WInu6ZzgDamBEWKO0LeFw1Dg2Bv0xJxCPZwd4";
-
-const API_KEY = "AIzaSyB56UJNZmkX2qALZTCuRnybSFSXCkIC6IU";
 
 const initialState = { query: "", sheetData: [], results: [], loading: false };
 
@@ -26,7 +25,7 @@ const AppProvider = ({ children }) => {
   const loadDoc = async () => {
     // fetch doc data
     const doc = new GoogleSpreadsheet(SPREADSHEET_ID, {
-      apiKey: API_KEY,
+      apiKey: secrets.API_KEY,
     });
 
     await doc.loadInfo();
